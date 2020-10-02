@@ -1,1 +1,40 @@
-<p>lo que sea</p>
+<div class="bodyButton"> 
+    <button (click)= "showHide()">
+        {{nameButton}}
+    </button>
+</div>
+
+<div class="body" *ngIf="status">
+    <button (click)="sendService()">Enviar</button>
+        <br>
+        <br>
+    <button (click)="cleanService()">Clean</button>
+    <div *ngIf="products.length === 0">
+    
+
+        <p>
+            {{ info |   lowercase}}
+        </p>
+    </div>
+    <div class="tableCenter">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of products">
+                <th scope="row">{{product.id}}</th>
+                <td>{{product.name}}</td>
+                <td>{{product.prece}}</td>    
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+
+
