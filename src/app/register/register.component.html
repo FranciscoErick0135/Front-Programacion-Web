@@ -1,1 +1,12 @@
-<p>register works!</p>
+<div class="Register">
+    <div align="center">
+        <img src = "https://i.pinimg.com/originals/58/8c/ac/588cac7bd5567337fe2498a42e443e0d.png">
+    </div>
+    <h1>Register</h1>
+    <input class = "Data" type = "username" name = "User: " placeholder="Username">
+    <input class = "Data" type = "fullname" name = "Fullname: " placeholder="Full name">
+    <input #email class = "Data" type = "email" name = "E-mail: " placeholder="E-mail">
+    <input #pass class = "Data" type = "password" name = "Password: " placeholder="Password">
+    <input class = "Boton" type = "submit" name = "Register" value="Register" (click)="register(email.value, pass.value)">
+    <input class = "Boton" type = "submit" name = "Register" value="Register with Google" (click)="registerGoogle()">
+</div>
