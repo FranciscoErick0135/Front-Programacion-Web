@@ -9,7 +9,10 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import {AngularFireModule} from '@angular/fire'
-import {AngularFireAuthModule} from '@angular/fire/auth'
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import {MatTableModule} from '@angular/material/table';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBIg1SRO0Rpdudc5AhjwTNDsJCISPeuZd4",
@@ -35,7 +38,11 @@ const firebaseConfig = {
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    BrowserAnimationsModule,
+    FormsModule, 
+    ReactiveFormsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

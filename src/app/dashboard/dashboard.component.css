@@ -1,6 +1,6 @@
 .Dashboard {
-    width: 300px;
-    height: 420px;
+    width: 800px;
+    height: 600px;
     background: #9FC2FF;
     margin: auto;
     margin-top: 10px;
@@ -26,7 +26,7 @@
   }
   
   .Data {
-    width: 100%;
+    width: 50%;
     border: 0.5px solid #3a78ff;
     margin-bottom: 15px;
     padding: 11px 10px;
@@ -36,10 +36,25 @@
   }
   
   .Boton {
-    width: 100%;
+    margin-left: 10px;
+    width: 30%;
     height: 40px;
     background: #017bab;
-    border: none;
+    border: darkblue;
     color: white;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    
+  }
+
+ .table{
+  overflow: scroll;
+  height: 200px;
+  }
+
+  .Boton2{
+    margin-left: 262px;
   }
