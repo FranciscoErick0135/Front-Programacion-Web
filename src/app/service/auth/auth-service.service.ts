@@ -82,16 +82,16 @@ export class AuthServiceService {
     return this.http.delete(`${this.api}api/v1/profile/profilePerson_url/`, httpOptions);
   }
 
-  register(usuario: string, nombre: number, apellido: string, correo: string, contra: string){
-    console.log(this.user ['token'])
+  register(usuario: string, correo: string, contra: string){
     const httpOptions = {
       headers : new HttpHeaders ({
         'Content-Type' : 'application/json',
-        'Authorization' : `Token ${this.user ['token']}`,
+        //'Authorization' : `Token ${this.user ['token']}`,
         'accept' : 'application/json',
       })
     };
-    return this.http.post(`${this.api}api/v1/register/`, {usuario, nombre, apellido, correo, contra}, httpOptions);
+    return this.http.post(`${this.api}api/v1/register/`, {"username":usuario, "email":correo, "password":contra}, httpOptions);
+    
   }
-
+  
 }

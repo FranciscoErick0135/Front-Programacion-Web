@@ -19,23 +19,26 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.registerFormGroup = this._formBuilder.group({
       user: ['', Validators.required],
-      password: ['', Validators.required]
+      first_name: ['', Validators.required],
+      last_name: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required],
     })
   }
 
   register(){
     const data = this.registerFormGroup.value;
-    if(data.user && data.first_name && data.last_name && data.email && data.password){
-      this._authServiceService.register(data.user, data.first_name, data.last_name, data.email, data.password).subscribe(access => {
-        console.log(data.user, data.password, data.first_name, data.last_name, data.email);
+    if(data.user && data.email && data.password){
+      this._authServiceService.register(data.user, data.email, data.password).subscribe(access => {
         localStorage.setItem('user', JSON.stringify(access));
         this._router.navigate(['login']);
 
       },error => {
-        
+        console.log(error);
       }
       );
     }
+    
   } 
 
   registerGoogle(){

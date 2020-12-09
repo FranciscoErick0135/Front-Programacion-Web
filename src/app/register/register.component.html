@@ -4,12 +4,10 @@
     </div>
     <h1>Register</h1>
     <form [formGroup] = "registerFormGroup">
-    <input class = "Data" formControlName="user" type = "username" name = "User: " placeholder="Username">
-    <input class = "Data" formControlName="first_name" type = "first_name" name = "first_name: " placeholder="First name">
-    <input class = "Data" formControlName="last_name" type = "last_name" name = "last_name: " placeholder="Last name">
-    <input class = "Data" formControlName="email" type = "email" name = "E-mail: " placeholder="E-mail">
-    <input class = "Data" formControlName="password" type = "password" name = "Password: " placeholder="Password">
-    <input class = "Boton" type = "submit" name = "Register" value="Register" (click)="register()">
-    <input class = "Boton" type = "submit" name = "Register" value="Register with Google" (click)="registerGoogle()">
-    </form>
+        <input class = "Data" formControlName="user" type = "username" name = "User: " placeholder="Username">
+        <input class = "Data" formControlName="email" type = "email" name = "E-mail: " placeholder="E-mail">
+        <input class = "Data" formControlName="password" type = "password" name = "Password: " placeholder="Password">
+        <input class = "Boton" type = "submit" name = "Register" value="Register" (click)="register()">
+        <input class = "Boton" type = "submit" name = "Register" value="Register with Google" (click)="registerGoogle()">
+    </form> 
 </div>

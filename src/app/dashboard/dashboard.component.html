@@ -4,6 +4,13 @@
         <img src = "https://i.pinimg.com/originals/58/8c/ac/588cac7bd5567337fe2498a42e443e0d.png">
     </div>
     <h1>Dashboard</h1>
+
+    <div align="center">
+      <input class = "Boton" (click) = "vista_agregar()" type = "submit" name = "Add" value="Add">
+      <input class = "Boton" (click) = "vista_modificar()" type = "submit" name = "Add" value="Modify">
+      <input class = "Boton" (click) = "vista_borrar()" type = "submit" name = "Add" value="Delete">
+      </div>
+      
     <div class="agregar" *ngIf = "bandera == 1">
         <form [formGroup] = "AgregarFormGroup">
             <input class = "Data" formControlName="name" type = "text" name = "Name: " placeholder="Full Name">
@@ -28,11 +35,7 @@
         </form>
     </div>
     
-    <div align="center">
-    <input class = "Boton" (click) = "vista_agregar()" type = "submit" name = "Add" value="Add">
-    <input class = "Boton" (click) = "vista_modificar()" type = "submit" name = "Add" value="Modify">
-    <input class = "Boton" (click) = "vista_borrar()" type = "submit" name = "Add" value="Delete">
-    </div>
+    
 
     <table class="table">
       <thead>

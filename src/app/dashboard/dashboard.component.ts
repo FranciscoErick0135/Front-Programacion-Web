@@ -18,7 +18,9 @@ export class DashboardComponent implements OnInit {
   EliminarFormGroup : FormGroup;
   bandera = 1;
   usuarios = [];
-  info = "No hay datos"
+  info = "No hay datos";
+  link = "http://localhost:4200/dashboard";
+
 
   constructor(private _formBuilder:FormBuilder, private _authServiceService : AuthServiceService, private _router: Router) { }
 
@@ -74,7 +76,7 @@ export class DashboardComponent implements OnInit {
       );
     }
     
-      window.location.href = 'http://localhost:4200/dashboard';
+      window.location.href = this.link;
   }
 
   modificar(){
@@ -89,7 +91,7 @@ export class DashboardComponent implements OnInit {
       }
       );
     }
-    window.location.href = 'http://localhost:4200/dashboard';
+      window.location.href = this.link;
   }
 
   borrar(){
@@ -103,7 +105,7 @@ export class DashboardComponent implements OnInit {
       }
       );
     }
-    window.location.href = 'http://localhost:4200/dashboard';
+       window.location.href = this.link;
   }
   
 }
