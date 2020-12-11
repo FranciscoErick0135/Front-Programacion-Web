@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
 
   cerrar_sesion(){
     localStorage.removeItem('user');
-    window.location.href = 'http://localhost:4200/login';
+    window.location.href = 'http://web-francisco.ddns.net:4200/';
     this._router.navigate(['/']);
   }
 
