@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
   bandera = 1;
   usuarios = [];
   info = "No hay datos";
-  link = "http://localhost:4200/dashboard";
+  link = "http://web-francisco.ddns.net:4200/dashboard";
 
 
   constructor(private _formBuilder:FormBuilder, private _authServiceService : AuthServiceService, private _router: Router) { }

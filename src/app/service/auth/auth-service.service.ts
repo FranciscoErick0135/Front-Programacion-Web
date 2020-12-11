@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 
 export class AuthServiceService {
-  api = 'http://localhost:8000/'
+  api = 'http://web-franciscoback.ddns.net/'
   user = JSON.parse(localStorage.getItem('user'));
 
   constructor( private http: HttpClient ) { }
